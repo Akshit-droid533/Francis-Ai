@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="theme-color"
+    content="#050d05"
+  >
+
+  <meta
+    name="description"
+    content="FRANCIS AI — Your Matrix-inspired AI assistant."
+  >
+
+  <title>FRANCIS AI</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+
+<body>
+  <div class="matrix-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="FRANCIS AI home">
+      <span class="brand-icon">F</span>
+      <span>FRANCIS<span class="accent"> AI</span></span>
+    </a>
+
+    <button
+      id="admin-open"
+      class="outline-button"
+      type="button"
+    >
+      ADMIN
+    </button>
+  </header>
+
+  <main class="app-shell">
+
+    <section class="hero">
+      <div class="status">
+        <span class="status-dot"></span>
+        AI SYSTEM READY
+      </div>
+
+      <h1>
+        ENTER THE
+        <span class="accent">MATRIX.</span>
+      </h1>
+
+      <p>
+        Your AI assistant. Your ideas. Your next move.
+      </p>
+    </section>
+
+    <section class="chat-panel" aria-label="AI chat">
+
+      <div class="chat-heading">
+        <div>
+          <h2>FRANCIS AI</h2>
+          <p>Powered by OpenRouter</p>
+        </div>
+
+        <button
+          id="clear-chat"
+          class="text-button"
+          type="button"
+        >
+          CLEAR
+        </button>
+      </div>
+
+      <div
+        id="messages"
+        class="messages"
+        aria-live="polite"
+        aria-label="Conversation"
+      >
+        <article class="message assistant-message">
+          <div class="message-label">FRANCIS</div>
+
+          <div class="message-content">
+            Hello! I am FRANCIS AI. Ask me a question,
+            explore an idea, or learn something new.
+          </div>
+        </article>
+      </div>
+
+      <div id="error-box" class="error-box" hidden></div>
+
+      <form id="chat-form" class="chat-form">
+        <label class="visually-hidden" for="prompt">
+          Your message
+        </label>
+
+        <textarea
+          id="prompt"
+          name="prompt"
+          placeholder="Message FRANCIS AI..."
+          rows="2"
+          maxlength="6000"
+          required
+        ></textarea>
+
+        <button id="send-button" type="submit">
+          <span id="send-label">SEND ↗</span>
+        </button>
+      </form>
+
+      <p class="disclaimer">
+        AI can make mistakes. Verify important information.
+      </p>
+    </section>
+
+    <section class="feature-grid" aria-label="Features">
+      <article class="feature-card">
+        <span class="feature-number">01</span>
+        <h3>THINK</h3>
+        <p>Explore questions and new ideas.</p>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-number">02</span>
+        <h3>CREATE</h3>
+        <p>Get help with writing and coding.</p>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-number">03</span>
+        <h3>LEARN</h3>
+        <p>Understand concepts step by step.</p>
+      </article>
+    </section>
+
+    <section id="admin-panel" class="admin-panel" hidden>
+      <div class="chat-heading">
+        <div>
+          <h2>ADMIN ACCESS</h2>
+          <p>Protected administration area</p>
+        </div>
+
+        <button
+          id="admin-close"
+          class="text-button"
+          type="button"
+        >
+          CLOSE
+        </button>
+      </div>
+
+      <form id="admin-form">
+        <label for="admin-password">Admin password</label>
+
+        <input
+          id="admin-password"
+          type="password"
+          autocomplete="current-password"
+          maxlength="256"
+          required
+        >
+
+        <button type="submit" class="admin-submit">
+          LOG IN
+        </button>
+      </form>
+
+      <p id="admin-status" role="status"></p>
+
+      <button
+        id="admin-logout"
+        class="outline-button"
+        type="button"
+        hidden
+      >
+        LOG OUT
+      </button>
+    </section>
+
+    <footer>
+      <span>FRANCIS AI</span>
+      <span>BUILT FOR CREATIVITY</span>
+      <span>© 2026</span>
+    </footer>
+
+  </main>
+</body>
+</html>
